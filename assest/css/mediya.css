@@ -18,6 +18,18 @@
     .border-bottom3{
         border-bottom: none!important;
     }
+    .border-right3{
+        border-right: unset !important;
+    }
+    :root{
+        --fs-xl: 36px;
+
+    }
+    .complete-border-bottom {
+        border-bottom: 1px solid #273138;
+
+    }
+   
 }
 @media (max-width:991px) {
 .border-right3{
@@ -28,6 +40,92 @@
  .align-item-center{
     align-items: center;
  }
+ .big-img {
+    transform: translateY(0%) !important;
+}
+.z_1{
+    z-index: -1 !important;
+}
+ .mobile-view {
+    position: absolute;
+    background-color: var(--fc-blue);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms linear;
+    z-index: 4;
+
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.overflow_hidden {
+    overflow: hidden !important;
+}
+
+.menu span:nth-child(1) {
+    height: 2px;
+    width: 30 px;
+    background-color: var(--fc-white2);
+    display: block;
+    border-radius: 20px;
+}
+
+.menu span:nth-child(2) {
+    height: 2px;
+    width: 30px;
+    background-color: var(--fc-white2);
+    display: block;
+    border-radius: 20px;
+}
+
+.menu span:nth-child(3) {
+    height: 2px;
+    width: 30px;
+    background-color: var(--fc-white2);
+    display: block;
+    border-radius: 20px;
+}
+
+.menu span {
+    transition: 300ms linear;
+}
+
+.cross span:nth-child(1) {
+    transform: rotate(42deg) translateY(13px);
+    transition: 300ms linear;
+    background-color: var(--fc-white2);
+    width: 30px;
+}
+
+.cross span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 300ms linear;
+}
+
+.cross span:nth-child(3) {
+    transform: rotate(-43deg) translateY(-13px);
+    transition: 300ms linear;
+    background-color: var(--fc-white2);
+    width: 30px;
+}
+:root {
+    /* font-size */
+    --fs-sm: 15px;
+    --fs-1sm: 16px;
+    --fs-2sm: 16px;
+    --fs-md: 17px;
+    --fs-1md: 28px;
+    --fs-lg: 36px;
+    --fs-xl: 38px;
+}
 }
 @media (max-width:767px) {
     .line-arrow{
@@ -41,5 +139,18 @@
     }
     .border-bottom4{
         border-bottom: 1px solid #273138 !important;
+    }
+    .elipse{
+        display: none;
+    }
+    :root {
+        /* font-size */
+        --fs-sm: 13px;
+        --fs-1sm: 14px;
+        --fs-2sm: 14px;
+        --fs-md: 15px;
+        --fs-1md: 20px;
+        --fs-lg: 28px;
+        --fs-xl: 30px;
     }
 }

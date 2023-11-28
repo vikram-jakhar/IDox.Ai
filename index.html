@@ -15,152 +15,328 @@
         integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assest/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body >
-     <header class="bg-header min-h500 z-1">
+<body class="bg-col or">
+    <div class="position-fixed bg-white min-vh-100 w-100 justify-content-center d-flex flex-column gap-5 z-10 overflow-hidden " id="preloader">
+        <div class="pari-container d-flex flex-column justify-content-center align-items-center">
+            <div class="folder d-flex flex-column justify-content-center align-item-center">
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
+            <div class="title fs-lg blue text-wrap">YOUR Page is loading...</div>
+          </div>
+        
+    </div>
+    <button id="back-to-top" class="my-auto mx-auto Btn-top button overflow-hidden">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+            </path>
+        </svg>
+    </button>
+    <header class="bg-header min-h500  z-1">
         <div class="nav-bg">
             <div class="nav-container ">
                 <nav class="d-flex justify-content-between align-items-center py-3 mb-0">
-                    <img src="./assest/img/nav-logo.png" alt="loading">
-                    <ul class="d-flex gap-4 align-items-center justify-content-center">
-                        <li><a href="" class="fs-sm fw-normal white plus-sans text-uppercase">Redact</a></li>
-                        <li><a href="" class="fs-sm fw-normal white plus-sans text-uppercase">extract</a></li>
-                        <li><a href="" class="fs-sm fw-normal white plus-sans text-uppercase">detect</a></li>
-                        <li><a href="" class="fs-sm fw-normal white plus-sans text-uppercase">compare</a></li>
-                        <li><a href="" class="fs-sm fw-normal white2 plus-sans btn-try">Try Now</a></li>
+                    <img data-aos="fade-up-right" data-aos-duration="4000" class="overflow-hidden"  src="./assest/img/nav-logo.png"
+                        alt="loading">
+                    <div onclick="openNav()" class="menu d-block d-lg-none z-5">
+                        <span></span>
+                        <span class="my-2"></span>
+                        <span></span>
+                    </div>
+                    <ul data-aos="fade-down-left" data-aos-duration="4000" id="navbar"
+                        class="d-flex gap-4 align-items-center justify-content-center mobile-view">
+                        <li><a href="#" class="fs-sm fw-normal white plus-sans text-uppercase letter home  ">redact</a></li>
+                        <li><a href="#" class="fs-sm fw-normal white plus-sans text-uppercase letter home">extract</a></li>
+                        <li><a href="#" class="fs-sm fw-normal white plus-sans text-uppercase letter home">detect</a></li>
+                        <li><a href="#" class="fs-sm fw-normal white plus-sans text-uppercase letter home">compare</a></li>
+                        <li><a href="#" class="fs-sm fw-normal white2 plus-sans btn-try">Try Now</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="container  ">
+        <div class="container position-relative z-1 ">
             <div class="row mt-5 pt-2">
-                <div class="col-xl-6">
+                <div class="col-lg-6 d-flex flex-column align-item-center overflow-hidden " data-aos="fade-down-right"
+                    data-aos-duration="4000">
                     <p class="fs-1md fw-light white2 plus-sans m-0"><span><svg xmlns="http://www.w3.org/2000/svg"
                                 width="111" height="3" viewBox="0 0 111 3" fill="none">
                                 <path
                                     d="M109.304 2.46582C109.856 2.46582 110.304 2.01811 110.304 1.46582C110.304 0.913536 109.856 0.46582 109.304 0.46582V2.46582ZM0 2.46582H109.304V0.46582H0V2.46582Z"
                                     fill="#0389FF" />
                             </svg></span> The world’s <span class="blue">#1</span></p>
-                    <h1 class="fs-xl fw-bold white2 plus-sans">AI powered document compliance solution</h1>
+                    <h1 class="fs-xl fw-bold white2 plus-sans mxw-392">AI powered document compliance solution</h1>
                 </div>
-                <div class="col-xl-6">
-                    <p class="fs-1sm fw-normal white plus-sans mxw-515 m-0">iDox.ai provides the world’s most advanced
+                <div class="col-lg-6 mt-lg-0 mt-5 d-flex flex-column align-item-center">
+                    <p data-aos="fade-up-left" data-aos-duration="4000"
+                        class="fs-1sm fw-normal white plus-sans mxw-515 m-0">iDox.ai provides the world’s most advanced
                         AI powered redaction solution for organizations to scan and detect within document management
                         systems, folders, and multitude of file sources. </p>
-                    <button class="fs-1sm white2 fw-semibold plus-sans btn-try mt-4 ">Request Demo</button>
+                    <div>
+                        <button data-aos="flip-left" data-aos-duration="4000"
+                            class="fs-1sm white2 fw-semibold plus-sans btn-try mt-4 ">Request Demo</button>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="bg-color ">
-        <div class="container">
-            <div class=" big-img">
-                <img src="assest/img/big-img.png" alt="loading" class="w-100">
-            </div>
+    <section class="bg-color position-relative z_1 z-1">
+        <span class="elipse position-absolute img-elipse"></span>
+        <div class="container big-img">
+            <img data-aos="flip-left" data-aos-duration="3000" src="assest/img/big-img.png" alt="loading"
+                class="w-100 ">
         </div>
-    </section> 
-     <section class="bg-color mt_up">
-        <div class="container-fluid">
-            <h3 class="white3 fw-light  font ff-plus fs-md text-center">In collaboration with</h3>
-            <div class="slider pt-5 pb-5">
-
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img1.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img2.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img3.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img4.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img2.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img6.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img7.webp" alt="#" class="w-100">
-                </div>
-                <div class="screen-slide">
-                    <img src="./assest/img/sdr-img8.webp" alt="#" class="w-100">
-                </div>
-
-            </div>
-
-        </div> 
     </section>
-    <section class="bg-color">
-        <div class="container">
-            <div class="row  align-items-center pt-5 pb-5">
-                <div class="col-lg-6 pt-4 pt-lg-0 pe-5 ">
-                    <img src="./assest/img/ai-img.png" alt="loading" class="w-100">
-                </div>
-                <div class="col-lg-6 ps-5 ">
-                    <h2 class="fs-lg white2 fw-medium plus-sans mxw-467">Compliance Security Trust</h2>
-                    <p class="fs-sm fw-normal white3 plus-sans mxw-474 pt-2 pb-4">Posuere ultrices aliquet risus
-                        malesuada viverra nec praesent. Sed nisl facilisi augue.</p>
-                    <button class="fs-sm fw-semibold white2 plus-sans btn-try text-capitalize">watch demo video</button>
-                </div>
+    <section class="bg-color py-5  overflow-hidden ">
+        <p class="fs-md plus-sans  mt-4 fw-light white3 text-center" data-aos="fade-down-left" data-aos-duration="3000">
+            In collaborate with</p>
+        <div class="slider-1 mt-4">
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img1.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img2.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img3.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img4.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img2.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img6.webp"
+                    class="img-slider curser-pointer" alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img7.webp" class="w-100"
+                    alt="images">
+            </div>
+            <div class="screen-slide">
+                <img data-aos="flip-left" data-aos-duration="3000" src="./assest/img/sdr-img8.webp" class=" w-100"
+                    alt="images">
             </div>
         </div>
     </section>
-    <section class="bg-color">
-        <div class="container">
-            <div class="row pt-5 pb-5 align-items-center ">
-                <div class="col-lg-6">
-                    <h2 class="fs-lg fw-medium white2 plus-sans">How we can help?</h2>
-                    <p class="fs-sm fw-normal white3 plus-sans mxw-438 pt-2 pb-4">Whether you handle financial,
-                        government, healthcare, or legal information, iDox.ai allows organizations to reduce risk of
-                        human error, combat time sensitive redaction requests, avoid costly penalties at a fraction of
-                        the price.</p>
-                    <button class="fs-sm fw-semibold white2 plus-sans btn-try text-capitalize">watch demo video</button>
-                </div>
-                <div class="col-lg-6 pt-5 justify-content-md-center pt-lg-0">
-                    <div class="box1 p-3 d-flex gap-3">
-                        <span>
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="64" height="64" rx="8" fill="#0389FF" fill-opacity="0.1" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M31.9923 17.4917V19.1059L31.1238 19.1716C30.6425 19.2099 29.9233 19.3029 29.5305 19.3795C29.1322 19.4616 28.4739 19.6367 28.0645 19.768C27.6551 19.8994 26.9913 20.1675 26.5985 20.3536C26.2002 20.5451 25.6691 20.8296 25.4091 20.9883C25.1491 21.147 24.712 21.4479 24.441 21.6504C24.1644 21.8583 23.6941 22.2523 23.3954 22.5369C23.0911 22.8159 22.6486 23.2811 22.4107 23.5656C22.1673 23.8502 21.7966 24.3426 21.5809 24.66C21.3706 24.9774 21.0166 25.5902 20.7953 26.028C20.574 26.4658 20.2808 27.1662 20.1425 27.5875C19.9987 28.0089 19.8216 28.66 19.7442 29.0376C19.6667 29.4152 19.5782 30.0061 19.5506 30.3509C19.5174 30.6956 19.4897 31.2155 19.4897 31.5C19.4897 31.7845 19.5174 32.3044 19.5506 32.6491C19.5782 32.9939 19.6667 33.5794 19.7442 33.9515C19.8161 34.3181 19.9931 34.9692 20.137 35.4015C20.2808 35.8283 20.574 36.5342 20.7953 36.972C21.0166 37.4098 21.3706 38.0226 21.5809 38.34C21.7966 38.6574 22.1673 39.1498 22.4107 39.4344C22.6486 39.7189 23.0911 40.1841 23.3954 40.4631C23.6941 40.7422 24.1644 41.1417 24.441 41.3496C24.712 41.552 25.1491 41.8475 25.4091 42.0117C25.6691 42.1704 26.2002 42.4549 26.5985 42.6465C26.9913 42.8325 27.6551 43.1006 28.0645 43.232C28.4739 43.3633 29.1322 43.5384 29.5305 43.615C29.9233 43.6916 30.5208 43.7792 30.8582 43.812C31.1902 43.8393 31.7046 43.8667 31.9923 43.8667C32.28 43.8667 32.8055 43.8393 33.1541 43.8065C33.5026 43.7792 34.1001 43.6916 34.4818 43.615C34.8635 43.5384 35.5107 43.3688 35.9201 43.232C36.3295 43.1006 36.9878 42.8325 37.3861 42.6465C37.7789 42.4549 38.3155 42.1704 38.5755 42.0117C38.8356 41.853 39.2671 41.552 39.5437 41.3496C39.8147 41.1471 40.2905 40.7477 40.5892 40.4686C40.888 40.1841 41.3361 39.7189 41.574 39.4344C41.8174 39.1498 42.188 38.6574 42.4038 38.34C42.614 38.0226 42.9681 37.4098 43.1893 36.972C43.4106 36.5342 43.7038 35.8338 43.8421 35.4125C43.9804 34.9911 44.163 34.34 44.2349 33.9624C44.3124 33.5848 44.4064 32.9556 44.4451 32.567C44.4839 32.1402 44.4949 31.5219 44.4728 31.0349C44.4562 30.5862 44.3898 29.9186 44.3345 29.5574C44.2736 29.1963 44.163 28.6655 44.0855 28.381C44.0081 28.0964 43.8698 27.6368 43.7757 27.3686C43.6817 27.095 43.4272 26.5205 43.2115 26.0827C43.0012 25.645 42.6417 25.0157 42.4204 24.6874C42.1991 24.3536 41.8063 23.8392 41.5574 23.5383C41.148 23.0622 41.0927 23.0075 41.0761 23.1279C41.0705 23.2045 41.0982 23.6477 41.1369 24.1128C41.1812 24.5779 41.2033 24.9719 41.1922 24.9883C41.1756 25.0047 40.8105 25.043 40.3846 25.0759C39.953 25.1142 39.5935 25.1361 39.5824 25.1306C39.5713 25.1306 39.4717 24.0964 39.3611 22.8433C39.2505 21.5902 39.1785 20.5451 39.2007 20.5177C39.2283 20.4958 40.2794 20.3864 41.5352 20.2824C42.7966 20.1784 43.8366 20.1018 43.8477 20.1183C43.8643 20.1347 43.903 20.5013 43.9362 20.9391C43.9749 21.3768 43.997 21.738 43.986 21.738C43.9749 21.7434 43.6098 21.7763 43.1672 21.8091C42.7246 21.8474 42.354 21.8857 42.3374 21.8967C42.3208 21.9131 42.4204 22.0389 42.5587 22.1812C42.697 22.3289 42.9736 22.6518 43.1783 22.909C43.3774 23.1662 43.7094 23.6313 43.9196 23.9487C44.1243 24.266 44.4617 24.857 44.6664 25.2619C44.8711 25.6669 45.1256 26.2359 45.2307 26.5205C45.3413 26.805 45.5018 27.2975 45.5958 27.6149C45.6843 27.9323 45.8116 28.4357 45.8724 28.7366C45.9333 29.0376 46.0107 29.4808 46.0494 29.7216C46.0826 29.9624 46.1269 30.6409 46.138 31.2264C46.1601 32.0253 46.1435 32.474 46.0771 33.0048C46.0273 33.3933 45.9222 34.0116 45.8503 34.3728C45.7784 34.7339 45.6124 35.3468 45.4852 35.7408C45.3579 36.1293 45.1311 36.7367 44.9817 37.0814C44.8324 37.4262 44.5724 37.957 44.4009 38.2579C44.2294 38.5589 43.9528 39.013 43.7757 39.2702C43.6042 39.5274 43.2834 39.9542 43.0621 40.2278C42.8463 40.496 42.3872 40.9994 42.0442 41.3441C41.7067 41.6834 41.1756 42.1649 40.8714 42.4057C40.5671 42.6464 40.0416 43.024 39.7096 43.2429C39.3722 43.4563 38.8411 43.7682 38.5202 43.9378C38.1994 44.102 37.6406 44.3537 37.2755 44.5015C36.9104 44.6437 36.335 44.8407 36.0031 44.9337C35.6656 45.0322 35.1954 45.1526 34.952 45.2019C34.7086 45.2511 34.172 45.3387 33.7626 45.3989C33.2204 45.4809 32.7336 45.5083 31.9923 45.5083C31.2399 45.5083 30.7642 45.4809 30.1944 45.3934C29.7684 45.3332 29.182 45.2292 28.8943 45.169C28.6067 45.1088 28.059 44.9611 27.6773 44.8407C27.2955 44.7203 26.7091 44.5015 26.3772 44.3647C26.0398 44.2224 25.5087 43.9597 25.1878 43.7846C24.8669 43.6095 24.3967 43.3304 24.1367 43.1553C23.8767 42.9857 23.4397 42.6683 23.1686 42.4495C22.892 42.236 22.3885 41.7819 22.04 41.4426C21.697 41.1088 21.2102 40.5835 20.9668 40.2825C20.7234 39.9816 20.3804 39.5274 20.2089 39.2702C20.0374 39.013 19.7663 38.5808 19.6114 38.3126C19.4565 38.039 19.2131 37.563 19.0748 37.2456C18.931 36.9282 18.7097 36.3646 18.5769 35.987C18.4497 35.6095 18.2782 35.0185 18.1952 34.6738C18.1177 34.329 18.0016 33.6888 17.9407 33.251C17.8633 32.7093 17.8301 32.1621 17.8301 31.5274C17.8301 30.92 17.8633 30.3235 17.9352 29.8037C17.996 29.3659 18.1067 28.7148 18.1897 28.3536C18.2726 27.9925 18.4497 27.3905 18.5769 27.013C18.7097 26.6354 18.931 26.0718 19.0748 25.7544C19.2131 25.437 19.4565 24.9555 19.6114 24.6874C19.7663 24.4138 20.0374 23.987 20.2089 23.7298C20.3804 23.4726 20.7234 23.0184 20.9668 22.7175C21.2102 22.4165 21.697 21.8912 22.04 21.5574C22.3885 21.2181 22.892 20.764 23.1686 20.5505C23.4397 20.3317 23.8767 20.0143 24.1367 19.8447C24.3967 19.6696 24.8559 19.396 25.1601 19.2263C25.4644 19.0567 26.001 18.7995 26.3495 18.6518C26.6981 18.504 27.2955 18.2797 27.6773 18.1593C28.059 18.0389 28.6288 17.8857 28.9496 17.8145C29.2705 17.7489 29.8182 17.6504 30.1667 17.6011C30.5152 17.5464 31.0685 17.5026 31.9923 17.4917ZM31.1625 22.8543V24.7694H32.8221V23.8119C32.8221 23.0841 32.8387 22.8543 32.8941 22.8543C32.9272 22.8543 33.1817 22.8926 33.4583 22.9363C33.7294 22.9801 34.172 23.0786 34.443 23.1552C34.7086 23.2318 35.1567 23.3905 35.4333 23.5109C35.7154 23.6313 36.1469 23.8447 36.3904 23.987C36.6338 24.1238 37.0044 24.3645 37.2202 24.5232C37.4304 24.6764 37.7789 24.961 37.9891 25.158C38.1994 25.3495 38.5258 25.6942 38.7138 25.9186C38.9019 26.1429 39.2062 26.5478 39.3832 26.8214C39.5603 27.0896 39.8092 27.5328 39.9364 27.8064C40.0692 28.0745 40.2462 28.5178 40.3348 28.7914C40.4233 29.0595 40.5394 29.4808 40.5837 29.7216C40.6335 29.9624 40.6888 30.2743 40.7331 30.6792H38.7968V32.3208H40.7331L40.7054 32.578C40.6888 32.7257 40.6335 33.0376 40.5837 33.2784C40.5394 33.5192 40.4233 33.935 40.3348 34.2086C40.2462 34.4768 40.0692 34.92 39.9364 35.1936C39.8092 35.4617 39.5603 35.905 39.3832 36.1786C39.2062 36.4467 38.9019 36.8571 38.7138 37.0814C38.5202 37.3058 38.2326 37.6177 38.0666 37.7709C37.9062 37.9241 37.6517 38.1485 37.4968 38.2689C37.3474 38.3892 36.9934 38.6355 36.7223 38.8106C36.4457 38.9857 35.9976 39.2319 35.7265 39.3578C35.4499 39.4891 35.0018 39.6642 34.7307 39.7518C34.4541 39.8393 34.0337 39.9542 33.7903 39.998C33.5468 40.0473 33.2315 40.102 32.8221 40.1457V38.2306H31.1625V40.1457L30.9025 40.1184C30.7531 40.102 30.4378 40.0473 30.1944 39.998C29.951 39.9542 29.525 39.8393 29.2539 39.7518C28.9773 39.6642 28.5181 39.4836 28.2305 39.3468C27.9428 39.21 27.467 38.9419 27.1794 38.7559C26.8917 38.5643 26.4547 38.2415 26.2168 38.0336C25.9734 37.8256 25.6027 37.459 25.3925 37.2182C25.1767 36.9775 24.8503 36.5452 24.6567 36.2606C24.4686 35.9761 24.1976 35.5055 24.0592 35.221C23.9209 34.9364 23.7384 34.4768 23.6499 34.2086C23.5614 33.935 23.4452 33.5192 23.4009 33.2784C23.3511 33.0376 23.2958 32.7257 23.2516 32.3208H25.1878V30.6792H23.2516L23.2792 30.4165C23.2958 30.2743 23.3511 29.9624 23.4009 29.7216C23.4452 29.4808 23.5614 29.0595 23.6499 28.7914C23.7384 28.5178 23.9209 28.0636 24.0592 27.779C24.1976 27.4945 24.4686 27.0239 24.6567 26.7394C24.8503 26.4548 25.1767 26.0225 25.3925 25.7818C25.6027 25.541 25.9734 25.1744 26.2168 24.9664C26.4547 24.7585 26.8751 24.4411 27.1517 24.2606C27.4228 24.0855 27.8156 23.8556 28.0258 23.7517C28.2305 23.6477 28.579 23.4945 28.8003 23.4069C29.016 23.3194 29.3867 23.199 29.6135 23.1333C29.8403 23.0731 30.2276 22.9856 30.471 22.9418C30.7144 22.898 30.9689 22.8597 31.1625 22.8543ZM31.1348 31.1388L28.6343 33.2237C29.1599 33.853 29.3977 34.132 29.5084 34.2579L29.7075 34.4822L32.7945 31.9049L32.8221 26.5205H31.1625L31.1348 31.1388Z"
-                                    fill="#016EE8" />
-                            </svg>
+    <div class="position-relative overflow-hidden ">
+        <span class="elipse sec-5 position-absolute"></span>
+        <span class="elipse sec-5-1 position-absolute"></span>
 
-                        </span>
-                        <div>
-                            <h4 class="fs-2sm fw-medium plus-sans blue">Time-Saving AI Integrations</h4>
-                            <p class="fs-sm fw-normal plus-sans white3 mxw-370">Posuere ultrices aliquet risus malesuada
-                                viverra nec praesent. Sed nisl facilisi augue.</p>
+        <section class="bg-color position-relative ">
+            <div class="container">
+                <div class="row  align-items-center pt-5 pb-5">
+                    <div class="col-lg-6 pt-4 pt-lg-0 pe-5 ">
+                        <img data-aos="zoom-in" data-aos-duration="3000" src="./assest/img/ai-img.png" alt="loading"
+                            class="w-100">
+                    </div>
+                    <div class="col-lg-6 ps-5" data-aos="zoom-out-left" data-aos-duration="3000">
+                        <h2 class="fs-lg white2 fw-medium plus-sans mxw-467">Compliance Security Trust</h2>
+                        <p class="fs-sm fw-normal white3 plus-sans mxw-474 pt-2 pb-4">Posuere ultrices aliquet risus
+                            malesuada viverra nec praesent. Sed nisl facilisi augue.</p>
+                        <button class="fs-sm fw-semibold white2 plus-sans btn-try text-capitalize">watch demo
+                            video</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-color overflow-hidden  position-relative">
+            <div class="container">
+                <div class="row pt-5 pb-5 align-items-center ">
+                    <div class="col-lg-6 position-relative z-3" data-aos="flip-left" data-aos-duration="3000">
+                        <h2 class="fs-lg fw-medium white2 plus-sans">How we can help?</h2>
+                        <p class="fs-sm fw-normal white3 plus-sans mxw-438 pt-2 pb-4">Whether you handle financial,
+                            government, healthcare, or legal information, iDox.ai allows organizations to reduce risk of
+                            human error, combat time sensitive redaction requests, avoid costly penalties at a fraction
+                            of
+                            the price.</p>
+                        <button class="fs-sm fw-semibold white2 plus-sans btn-try text-capitalize">watch demo
+                            video</button>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-5 mt-lg-0" data-aos="fade-up-left" data-aos-duration="3000">
+                        <div class="accordion accordion-flush position-relative z-3" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="collapseOnE"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed  fs-3sm fw-medium plus-sans   pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnE"
+                                                aria-expanded="false" aria-controls="collapseOnE">
+                                                Time-Saving AI Integrations
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOnE" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body max-370 fs-2sm fw-normal  white2 opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="collapseTwo"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed  fs-3sm fw-medium plus-sans    pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Enterprise-Level Scalability
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body max-370 fs-2sm fw-normal  white2  opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="flush-collapsethree"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed  fs-3sm fw-medium   plus-sans  pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapsethree" aria-expanded="false"
+                                                aria-controls="flush-collapsethree">
+                                                Cloud-Based For Multiple Locations
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapsethree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body  max-370 fs-2sm fw-normal  white2 opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="flush-collapsefour"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed  fs-3sm fw-medium   plus-sans  pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapsefour" aria-expanded="false"
+                                                aria-controls="flush-collapsefour">
+                                                Collaborative Work Among Teams
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapsefour" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body  max-370 fs-2sm fw-normal  white2 opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="flush-collapsefive"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed    fs-3sm fw-medium plus-sans  pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapsefive" aria-expanded="false"
+                                                aria-controls="flush-collapsefive">
+                                                Proactive Risk Assessment Reports
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapsefive" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body  max-370 fs-2sm fw-normal  white2 opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="d-flex">
+                                    <img src="./assest/img/Frame1.png" alt="accordion-img" id="flush-collapsesix"
+                                        class="accordion-collapse collapse img_mwh tranlate-xy"
+                                        data-bs-parent="#accordionFlushExample">
+                                    <div class="d-block">
+                                        <h2 class="accordion-header">
+                                            <button
+                                                class="accordion-button collapsed    fs-3sm fw-medium plus-sans  pl-26 d-block"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapsesix" aria-expanded="false"
+                                                aria-controls="flush-collapsesix">
+                                                High Accuracy To Avoid Oversights
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapsesix" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div
+                                                class=" accordion-body  max-370 fs-2sm fw-normal  white2 opacity-80 lh-27">
+                                                Posuere ultrices aliquet
+                                                risus malesuada viverra nec
+                                                praesent. Sed nisl facilisi augue.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="box1 p-3 mt-3">
-                        <h4 class="fs-2sm fw-medium plus-sans white">Enterprise-Level Scalability</h4>
-                    </div>
-                    <div class="box1 p-3 mt-3">
-                        <h4 class="fs-2sm fw-medium plus-sans white">Cloud-Based For Multiple Locations</h4>
-                    </div>
-                    <div class="box1 p-3 mt-3">
-                        <h4 class="fs-2sm fw-medium plus-sans white">Collaborative Work Among Teams</h4>
-                    </div>
-                    <div class="box1 p-3 mt-3">
-                        <h4 class="fs-2sm fw-medium plus-sans white">Proactive Risk Assessment Reports</h4>
-                    </div>
-                    <div class="box1 p-3 mt-3">
-                        <h4 class="fs-2sm fw-medium plus-sans white">High Accuracy To Avoid Oversights</h4>
-                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="bg-color">
+        </section>
+    </div>
+    <section class="bg-color position-relative z-1">
+        <span class="elipse position-absolute sec-6"></span>
+        <span class="elipse position-absolute sec-6-1"></span>
         <div class="container">
             <div class="row align-items-center pt-5 pb-5 justify-content-center ">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos-duration="3000" data-aos="fade-right">
                     <h4 class="fs-lg fw-medium plus-sans white2">How We Bring Value</h4>
                     <div class="box2 d-flex align-items-center p-3 gap-3 mt-3">
                         <span>
@@ -222,7 +398,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
-                    <img src="./assest/img/brain-img.png" alt="loading" class="w-100">
+                    <img data-aos-duration="3000" data-aos="zoom-in-right" src="./assest/img/brain-img.png"
+                        alt="loading" class="w-100">
                 </div>
             </div>
         </div>
@@ -232,7 +409,7 @@
             Testimonials
         </h2>
         <div class="custom-container container ">
-            <div class="slider3">
+            <div class="slider3" data-aos-duration="3000" data-aos="fade-up">
                 <div class="slider3-card  cursor-point d-flex flex-column align-items-center justify-content-center">
                     <img src="./assest/img/sdr2-img.png" alt="loading" class="mb-3">
                     <p class="plus-sans white3 fs-md  max-834 fw-normal mb-5 mb-14">
@@ -271,14 +448,18 @@
                 </div>
 
             </div>
+        </div>
     </section>
-    <section class="bg-color">
+    <section class="bg-color position-relative z-1">
+        <span class="elipse position-absolute sec-8"></span>
+        <span class="elipse position-absolute sec-8-1"></span>
         <div class="container">
             <div class="row align-items-center pt-5 pb-5">
                 <div class="col-lg-6">
-                    <img src="./assest/img/coin-img.png" alt="loading" class="w-100">
+                    <img data-aos-duration="3000" data-aos="flip-left" src="./assest/img/coin-img.png" alt="loading"
+                        class="w-100">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos-duration="3000" data-aos="fade-down-left">
                     <h4 class="fs-lg fw-medium  white2 plus-sans">We provide secure solutions</h4>
                     <p class="fs-sm fw-normal plus-sans white3 mxw-460">For nationwide and global teams, our cloud-based
                         solutions keep everyone on the same page, all backed by our SOC 2 and ISO 27001 certifications.
@@ -288,111 +469,121 @@
             </div>
         </div>
     </section>
-    <section class="bg-color">
+    <section class="bg-color position-relative z-1">
+        <span class="elipse position-absolute sec-9"></span>
         <div class="container">
-            <h2 class="fs-lg fw-medium plus-sans white2 text-center">How it works</h2>
-            <p class="fs-2sm fw-normal plus-sans white3 text-center ">Only 2 minutes redacting a 10 page document</p>
+            <h2 data-aos="zoom-in-up" data-aos-duration="3000"
+                class="fs-lg fw-medium plus-sans white2 text-center pt-5">How it works</h2>
+            <p data-aos="zoom-in-up" data-aos-duration="3000" class="fs-2sm fw-normal plus-sans white3 text-center ">
+                Only 2 minutes redacting a 10 page document</p>
             <div class="row justify-content-center align-items-center pt-5 pb-5">
                 <div class="col-xl-3 col-md-6 col-12 d-flex flex-column justify-content-center   position-relative">
-                    <img src="./assest/img/img-1.png" alt="">
-                    <h6 class="fs-md fw-medium plus-sans white pt-3">Click to select a file</h6>
-                    <span class="line-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="55" height="32"
-                            viewBox="0 0 55 32" fill="none">
+                    <img data-aos-duration="3000" data-aos="flip-left" src="./assest/img/img-1.png" alt="">
+                    <h6 data-aos="zoom-in-up" data-aos-duration="3000" class="fs-md fw-medium plus-sans white pt-3">
+                        Click to select a file</h6>
+                    <span class="" data-aos="fade-right" data-aos-duration="3000" class="line-arrow">  <svg
+                            xmlns="http://www.w3.org/2000/svg" width="55" height="32" viewBox="0 0 55 32" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M37.0491 0.691891L54.718 15.9656L37.0491 31.7426L47.3725 18.0517L0.76172 16.2532L47.3725 14.4019L37.0491 0.691891Z"
-                                fill="url(#paint0_linear_2_11868)" />
+                                fill="url(#paint0_linear_2_11863)" />
                             <defs>
-                                <linearGradient id="paint0_linear_2_11868" x1="54.718" y1="16.2173" x2="5.04814"
+                                <linearGradient id="paint0_linear_2_11863" x1="54.718" y1="16.2173" x2="5.04814"
                                     y2="16.2173" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0389FF" />
+                                    <stop offset="0" stop-color="#0389FF" />
                                     <stop offset="1" stop-color="#0389FF" stop-opacity="0" />
                                 </linearGradient>
                             </defs>
                         </svg></span>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12 d-flex flex-column justify-content-center position-relative">
-                    <img src="./assest/img/img-2.png" alt="">
-                    <h6 class="fs-md fw-medium plus-sans white pt-3">Select data model</h6>
-                    <span class="line-arrow2"> <svg xmlns="http://www.w3.org/2000/svg" width="55" height="32"
-                            viewBox="0 0 55 32" fill="none">
+                    <img data-aos-duration="3000" data-aos="flip-left" src="./assest/img/img-2.png" alt="">
+                    <h6 data-aos="zoom-in-up" data-aos-duration="3000" class="fs-md fw-medium plus-sans white pt-3">
+                        Select data model</h6>
+                    <span data-aos="fade-right" data-aos-duration="3000" class="line-arrow2"> <svg
+                            xmlns="http://www.w3.org/2000/svg" width="55" height="32" viewBox="0 0 55 32" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M37.0491 0.691891L54.718 15.9656L37.0491 31.7426L47.3725 18.0517L0.76172 16.2532L47.3725 14.4019L37.0491 0.691891Z"
-                                fill="url(#paint0_linear_2_11868)" />
+                                fill="url(#paint0_linear_2_11862)" />
                             <defs>
-                                <linearGradient id="paint0_linear_2_11868" x1="54.718" y1="16.2173" x2="5.04814"
+                                <linearGradient id="paint0_linear_2_11862" x1="54.718" y1="16.2173" x2="5.04814"
                                     y2="16.2173" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0389FF" />
+                                    <stop offset="0" stop-color="#0389FF" />
                                     <stop offset="1" stop-color="#0389FF" stop-opacity="0" />
                                 </linearGradient>
                             </defs>
                         </svg></span>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12 d-flex flex-column justify-content-center position-relative">
-                    <img src="./assest/img/img-3.png" alt="">
-                    <h6 class="fs-md fw-medium plus-sans white pt-3">Auto Highlight by AI</h6>
-                    <span class="line-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="55" height="32"
-                            viewBox="0 0 55 32" fill="none">
+                    <img data-aos-duration="3000" data-aos="flip-left" src="./assest/img/img-3.png" alt="">
+                    <h6 data-aos="zoom-in-up" data-aos-duration="3000" class="fs-md fw-medium plus-sans white pt-3">Auto
+                        Highlight by AI</h6>
+                    <span data-aos="fade-right" data-aos-duration="3000" class="line-arrow"> <svg
+                            xmlns="http://www.w3.org/2000/svg" width="55" height="32" viewBox="0 0 55 32" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M37.0491 0.691891L54.718 15.9656L37.0491 31.7426L47.3725 18.0517L0.76172 16.2532L47.3725 14.4019L37.0491 0.691891Z"
-                                fill="url(#paint0_linear_2_11868)" />
+                                fill="url(#paint0_linear_2_11861)" />
                             <defs>
-                                <linearGradient id="paint0_linear_2_11868" x1="54.718" y1="16.2173" x2="5.04814"
+                                <linearGradient id="paint0_linear_2_11861" x1="54.718" y1="16.2173" x2="5.04814"
                                     y2="16.2173" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0389FF" />
+                                    <stop offset="0" stop-color="#0389FF" />
                                     <stop offset="1" stop-color="#0389FF" stop-opacity="0" />
                                 </linearGradient>
                             </defs>
                         </svg></span>
                 </div>
                 <div class="col-xl-3 col-md-6 col-12 d-flex flex-column justify-content-center">
-                    <img src="./assest/img/img-4.png" alt="">
-                    <h6 class="fs-md fw-medium plus-sans white pt-3">Doc. has been redacted</h6>
+                    <img data-aos-duration="3000" data-aos="flip-left" src="./assest/img/img-4.png" alt="">
+                    <h6 data-aos="zoom-in-up" data-aos-duration="3000" class="fs-md fw-medium plus-sans white pt-3">Doc.
+                        has been redacted</h6>
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-color">
+    <section class="bg-color position-relative z-1">
+        <span class="elipse position-absolute sec-11"></span>
         <div class="container">
-            <h4 class="fs-lg fw-medium plus-sans white2 text-center pt-5">Our Integrations</h4>
+            <h4 data-aos="fade-down-left" data-aos-duration="3000"
+                class="fs-lg fw-medium plus-sans white2 text-center pt-5">Our Integrations</h4>
             <div class="row pt-5 pb-5">
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right1 border-bottom1 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/google-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/google-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right2 border-bottom1 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/drop-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/drop-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right1 border-bottom1 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/box-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/box-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-bottom1 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/nd-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/nd-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right1 border-bottom2 pt-5 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/ex-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/ex-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right2 border-bottom2  pt-5 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/amzone-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/amzone-img.png" alt="loading">
                 </div>
                 <div
                     class="col-xl-3 col-md-6 col-12 p-5 border-right1 border-bottom4 pt-5 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/sp-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/sp-img.png" alt="loading">
                 </div>
                 <div class="col-xl-3 col-md-6 col-12 p-5  pt-5 d-flex justify-content-center align-items-center">
-                    <img src="assest/img/od-img.png" alt="loading">
+                    <img data-aos="flip-up" data-aos-duration="3000" src="assest/img/od-img.png" alt="loading">
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-color">
+    <section class="bg-color position-relative z-1">
+        <span class="elipse position-absolute sec-10"></span>
         <div class="container">
             <div class="row pt-5 pb-5 align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 overflow-hidden" data-aos="fade-up-right" data-aos-duration="3000">
                     <h3 class="fs-lg fw-medium text-capitalize plus-sans white2 mxw-525">Accelerate Your Enterprise’s
                         Document Redaction Efforts</h3>
                     <p class="fs-2sm fw-normal white3 mxw-537 plus-sans pt-2 m-0">As your team carries out
@@ -401,289 +592,135 @@
                     <button class="fs-2sm fw-semibold white2 plus-sans text-capitalize mt-4 btn-try">learn more</button>
                 </div>
                 <div class="col-lg-6">
-                    <img src="assest/img/moblie-img.png" alt="loading" class="w-100 rounded-5">
+                    <img data-aos-duration="3000" data-aos="zoom-in" src="assest/img/moblie-img.png" alt="loading"
+                        class="w-100 rounded-5">
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-color">
+    <section class="bg-color py-sm-5 z-1  position-relative overflow-hidden">
+        <span class="elipse position-absolute z-n1 "></span>
+        <span class="elipse position-absolute z-n1 center-elipse "></span>
         <div class="container">
-            <h4 class="fs-lg fw-medium white2 plus-sans text-capitalize text-center pt-4">choose the plan best fits for
-                you</h4>
-            <div class="row  pt-5 pb-5">
-                <div class="col-xl-4 col-lg-6 col-12 p-0 border-right3  ">
-                    <h5 class="fs-1md fw-semibold plus-sans white2 text-center m-0">$0.99</h5>
-                    <p class="fs-md fw-medium p white2 plus-sans text-center border-bottom1 m-0">7 Days</p>
-                    <div class="pt-4 p-4 ">
-                        <div class="d-flex align-items-center  gap-4 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
+            <h3 data-aos-duration="3000" data-aos="fade-down-right"
+                class="plus-sans fs-lg fw-medium  text-center white2 text-capitalize m-0 py-5 overflow-hidden">choose the plan best
+                fits for you
+            </h3>
+            <div class="row justify-content-center">
+                <div
+                    class="col-xl-4 col-md-6  col-12 my-card  p-0 border-right1 complete-border-bottom  d-flex flex-column justify-content-center align-items-center">
+                    <div class="w-100">
+                        <div class="border-bottom1 d-flex flex-column  align-items-center">
+                            <p data-aos-duration="3000" data-aos="zoom-in"
+                                class="plus-sans text-center fw-semibold fs-1md white2 m-0 dollar-card">$0.99</p>
+                            <p data-aos-duration="3000" data-aos="zoom-in"
+                                class="plus-sans text-center fw-medium fs-md white2">7 Days</p>
 
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">50 pages analysis ( 7 days
-                                )</p>
                         </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
+                        <div class="ps-5 ms-sm-5 ms-lg-0 p-0 ">
+                            <div class="d-flex align-items-center gap-3 pt-sm-5  py-3 " data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="loading">
+                                <p class="plus-sans fw-normal opacity-70 fs-3sm white3 text-capitalize m-0">50 pages
+                                    analysis ( 7
+                                    days )
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal opacity-70 fs-3sm white3 text-capitalize m-0">Share up to
+                                    2 users
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal opacity-70 fs-3sm white3 text-capitalize m-0">After 7 day,
+                                    auto
+                                    renews
+                                    plan
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4 mb-xl-0 justify-content-center py-sm-5 pb-4 pb-sm-0 ">
+                            <button class=" plus-sans btn-select fw-semibold fs-2sm white2 mt-4">Select</button>
+                        </div>
 
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">Share up to 2 users</p>
-                        </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">After 7 day, auto renews
-                                plan</p>
-                        </div>
-                        <div class="text-center pt-5 mt-4">
-                            <button class="fs-2sm fw-semibold white3 plus-sans text-capitalize btn-select">select</button>
-                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-12 p-0 border-right2  ">
-                    <h5 class="fs-1md fw-semibold plus-sans white2 text-center m-0">$490</h5>
-                    <p class="fs-md fw-medium p white2 plus-sans text-center border-bottom1 m-0">Business</p>
-                    <div class="pt-4 p-4   ">
-                        <div class="d-flex align-items-center  gap-4 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
+                <div
+                    class="col-xl-4 p-0 col-md-6 col-12 my-card  border-right2 complete-border-bottom  pt-5 pt-md-0 d-flex flex-column justify-content-center align-items-center">
+                    <div class="w-100">
+                        <div class="border-bottom1">
+                            <p data-aos-duration="3000" data-aos="zoom-in"
+                                class="plus-sans fw-semibold text-center fs-1md white2 m-0 dollar-card">$490</p>
+                            <p data-aos-duration="3000" data-aos="zoom-in"
+                                class="plus-sans fw-medium text-center fs-md white2">Business</p>
+                        </div>
+                        <div class="ps-5 ms-sm-5 ms-lg-0 p-0">
+                            <div class="d-flex align-items-center gap-3 pt-5 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class=" fw-normal fs-3sm white3 text-capitalize m-0">unlimited pages
+                                    analysis/
+                                    year
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal  fs-3sm white3 m-0">Share up to 10 users
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-sm-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal  fs-3sm white3 m-0">Maximum 100 pages per
+                                    doc.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex py-5 mb-4 mb-xl-0 justify-content-center  pb-4 pb-sm-0">
+                            <button class="plus-sans btn-select fw-semibold fs-2sm white2 mt-sm-4">Select</button>
+                        </div>
 
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">unlimited pages analysis/
-                                year</p>
-                        </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">Share up to 10 users</p>
-                        </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">Maximum 100 pages per doc.
-                            </p>
-                        </div>
-                        <div class="text-center pt-5 mt-4">
-                            <button class="fs-2sm fw-semibold white3 plus-sans text-capitalize btn-select">select</button>
-                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-12 col-12 d-flex flex-column align-items-center p-0 border-top2 ">
-                    <h5 class="fs-1md fw-semibold plus-sans white2 text-center pt-lg-2 pt-xl-0 m-0">$190</h5>
-                    <p class="fs-md fw-medium p white2 plus-sans text-center border-bottom5 m-0">Basic</p>
-                    <div class="pt-4 p-4  ">
-                        <div class="d-flex align-items-center  gap-4 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
+                <div
+                    class="col-xl-4 p-0 col-md-6 col-12 my-card  border-right3 border-le pt-5 pt-xl-0 d-flex flex-column justify-content-center align-items-center">
+                    <div class="w-100">
+                        <div class="border-bottom1 d-flex flex-column align-items-center">
+                            <p data-aos-duration="3000" data-aos="zoom-in"
+                                class="plus-sans fw-semibold fs-1md white2 m-0 dollar-card">$190</p>
+                            <p data-aos-duration="3000" data-aos="zoom-in" class="plus-sans fw-medium fs-md white2">
+                                Basic</p>
 
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">3000 pages analysis/ year
-                            </p>
                         </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">Share up to 2 users</p>
+                        <div class="ps-5 ms-sm-5 ms-lg-0 p-0 ">
+                            <div class="d-flex align-items-center gap-3 pt-5 py-3  ">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal fs-3sm white3 m-0" data-aos="zoom-in-right"
+                                    data-aos-duration="3000">3000 pages analysis/
+                                    year
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal fs-3sm white3 m-0">Share up to 2 users
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3" data-aos="zoom-in-right"
+                                data-aos-duration="3000">
+                                <img src="./assest/img/tick-img.png" alt="right-tick-img">
+                                <p class="plus-sans fw-normal  fs-3sm white3 m-0">Maximum 100 pages per
+                                    doc.
+                                </p>
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center gap-4 pt-3 ">
-                            <span>
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_b_2_11934)">
-                                        <rect x="0.685547" y="0.685669" width="20.6296" height="20.6296" rx="10.3148"
-                                            fill="#0389FF" fill-opacity="0.1" />
-                                        <path d="M16.1586 7.56256L9.28202 14.4388L5.84375 11.0008" stroke="#0389FF"
-                                            stroke-width="1.03148" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_b_2_11934" x="-1.89316" y="-1.89304" width="25.7863"
-                                            height="25.787" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.28935" />
-                                            <feComposite in2="SourceAlpha" operator="in"
-                                                result="effect1_backgroundBlur_2_11934" />
-                                            <feBlend mode="normal" in="SourceGraphic"
-                                                in2="effect1_backgroundBlur_2_11934" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-
-                            </span>
-                            <p class="fs-2sm fw-normal plus-sans white3 text-capitalize m-0">Maximum 100 pages per doc.
-                            </p>
-                        </div>
-                        <div class="text-center pt-5 mt-4">
-                            <button class="fs-2sm fw-semibold white3 plus-sans text-capitalize btn-select">select</button>
+                        <div class="d-flex justify-content-center pt-sm-5 ">
+                            <button class="plus-sans btn-select fw-semibold fs-2sm white2 mt-4">Select</button>
                         </div>
                     </div>
                 </div>
@@ -691,73 +728,59 @@
         </div>
     </section>
     <section class="sec-bg overflow-hidden m_1">
-        <span class=""><svg width="1440" height="87" viewBox="0 0 1440 87" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="1440" height="86.0171" transform="matrix(1 0 0 -1 0 86.0542)"
-                    fill="url(#paint0_linear_2_11970)" />
-                <defs>
-                    <linearGradient id="paint0_linear_2_11970" x1="720" y1="0" x2="720" y2="86.0171"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#020D15" stop-opacity="0" />
-                        <stop offset="1" stop-color="#020D15" />
-                    </linearGradient>
-                </defs>
-            </svg>
-        </span>
+        <div class="gradient"></div>
         <div class="container">
-            <h2 class="fs-lg fw-medium white2 text-capitalize text-center plus-sans pt-5">Get started today!</h2>
-            <p class="fs-1sm fw-normal white3 text-center plus-sans mxw-617 m-auto pb-5">Arcu egestas pellentesque velit
+            <h2 data-aos-duration="3000" data-aos="fade-down-left"
+                class="fs-lg fw-medium white2 text-capitalize text-center plus-sans pt-5 overflow-hidden ">Get started today!</h2>
+            <p data-aos="fade-down-right" data-aos-duration="3000"
+                class="fs-1sm fw-normal white3 text-center plus-sans mxw-617 m-auto pb-5">Arcu egestas pellentesque
+                velit
                 facilisis in in. Tortor nisl urna lacus mauris adipiscing commodo purus. Lectus etiam arcu sagittis
                 pellentesque hendrerit.</p>
-            <div class="emil-box mb-5 m-auto ">
-                <label
+            <div class="emil-box mb-5 m-auto" data-aos="zoom-in" data-aos-duration="3000">
+                <div
                     class="w-100 rounded-pill d-flex align-items-center justify-content-center justify-content-between">
                     <input type="text" placeholder="Enter your email here"
                         class="border-0 py-2 px-1 outline_0 fs-1sm fw-normal white3 plus-sans w-100">
-                    <button class="fs-1sm fw-semibold white2 text-capitalize plus-sans btn-try text-nowrap d-none d-sm-flex">Sign up
+                    <button
+                        class="fs-1sm fw-semibold white2 text-capitalize plus-sans btn-try text-nowrap d-none d-sm-flex">Sign
+                        up
                         now</button>
-                </label>
+                </div>
             </div>
             <div class="mb-4 d-block d-flex d-sm-none d-flex justify-content-center">
                 <button class="fs-1sm fw-semibold white2 text-capitalize plus-sans btn-try text-nowrap">Sign up
                     now</button>
             </div>
         </div>
-        <span class=""><svg width="1440" height="87" viewBox="0 0 1440 87" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="1440" height="86.0171" transform="matrix(1 0 0 -1 0 86.0542)"
-                    fill="url(#paint0_linear_2_11970)" />
-                <defs>
-                    <linearGradient id="paint0_linear_2_11970" x1="720" y1="0" x2="720" y2="86.0171"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#020D15" stop-opacity="0" />
-                        <stop offset="1" stop-color="#020D15" />
-                    </linearGradient>
-                </defs>
-            </svg>
-        </span>
-
+        <div class="gradient-b"></div>
     </section>
     <footer class="bg-footer overflow-hidden">
         <div class="my-container ">'
             <div class="row pt-5 pb-5  justify-content-between overflow-hidden ">
-                <div class="col-lg-3 col-12  d-flex  flex-column align-item-center ">
+                <div class="col-lg-3 col-12  d-flex  flex-column align-item-center overflow-hidden" data-aos="zoom-in-right"
+                    data-aos-duration="3000">
                     <img src="./assest/img/footer-logo.png" alt="loading">
-                    <p class="fs-sm fw-normal white3 plus-sans mxw-227 m-0 pt-3 pb-4">Any system that works with API can
+                    <p data-aos="zoom-in" data-aos-duration="3000"
+                        class="fs-sm fw-normal white3 plus-sans mxw-227 m-0 pt-3 pb-4">Any system that works with API
+                        can
                         be connected
                         via APIcenter.</p>
-                    <div class="d-flex gap-4">
+                    <div class="d-flex gap-4" data-aos="fade-up" data-aos-duration="3000">
                         <div class="svg-circle d-flex justify-content-center ">
-                            <span><svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                            <span><a href="https://www.facebook.com/" target="_blank">
+                                <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M7.3418 11.4912H9.8418L10.8418 7.49121H7.3418V5.49121C7.3418 4.46121 7.3418 3.49121 9.3418 3.49121H10.8418V0.131211C10.5158 0.088211 9.2848 -0.00878906 7.9848 -0.00878906C5.2698 -0.00878906 3.3418 1.64821 3.3418 4.69121V7.49121H0.341797V11.4912H3.3418V19.9912H7.3418V11.4912Z"
                                         fill="#808B93" />
                                 </svg>
+                            </a>
                             </span>
                         </div>
                         <div class="svg-circle d-flex justify-content-center ">
-                            <span><svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                            <span><a href="https://www.instagram.com/" target="_blank">
+                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M8.84115 5.65771C8.0897 5.65771 7.36903 5.95623 6.83768 6.48758C6.30632 7.01893 6.00781 7.7396 6.00781 8.49105C6.00781 9.24249 6.30632 9.96316 6.83768 10.4945C7.36903 11.0259 8.0897 11.3244 8.84115 11.3244C9.59259 11.3244 10.3133 11.0259 10.8446 10.4945C11.376 9.96316 11.6745 9.24249 11.6745 8.49105C11.6745 7.7396 11.376 7.01893 10.8446 6.48758C10.3133 5.95623 9.59259 5.65771 8.84115 5.65771Z"
@@ -766,16 +789,19 @@
                                         d="M5.4418 -0.00878906C4.08919 -0.00878906 2.79199 0.528531 1.83555 1.48497C0.879117 2.4414 0.341797 3.73861 0.341797 5.09121L0.341797 11.8912C0.341797 13.2438 0.879117 14.541 1.83555 15.4975C2.79199 16.4539 4.08919 16.9912 5.4418 16.9912H12.2418C13.5944 16.9912 14.8916 16.4539 15.848 15.4975C16.8045 14.541 17.3418 13.2438 17.3418 11.8912V5.09121C17.3418 3.73861 16.8045 2.4414 15.848 1.48497C14.8916 0.528531 13.5944 -0.00878906 12.2418 -0.00878906L5.4418 -0.00878906ZM4.87513 8.49121C4.87513 7.43919 5.29305 6.43025 6.03694 5.68635C6.78083 4.94246 7.78977 4.52454 8.8418 4.52454C9.89382 4.52454 10.9028 4.94246 11.6467 5.68635C12.3905 6.43025 12.8085 7.43919 12.8085 8.49121C12.8085 9.54324 12.3905 10.5522 11.6467 11.2961C10.9028 12.04 9.89382 12.4579 8.8418 12.4579C7.78977 12.4579 6.78083 12.04 6.03694 11.2961C5.29305 10.5522 4.87513 9.54324 4.87513 8.49121ZM12.8085 4.52454H13.9418V3.39121H12.8085V4.52454Z"
                                         fill="#808B93" />
                                 </svg>
+                            </a>
 
                             </span>
                         </div>
                         <div class="svg-circle d-flex justify-content-center ">
-                            <span><svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                            <span><a href="https://www.twitter.com/" target="_blank">
+                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M17.3418 1.61645C16.7161 1.90087 16.0416 2.08777 15.3428 2.17716C16.0579 1.74647 16.6104 1.06387 16.8705 0.243123C16.196 0.649433 15.4484 0.93385 14.6602 1.09637C14.0182 0.397521 13.1162 -0.00878906 12.0923 -0.00878906C10.1826 -0.00878906 8.62239 1.55144 8.62239 3.47735C8.62239 3.75364 8.65489 4.0218 8.71178 4.27372C5.81885 4.12745 3.24285 2.73787 1.52822 0.63318C1.22755 1.14513 1.0569 1.74647 1.0569 2.38031C1.0569 3.59112 1.66637 4.66377 2.60901 5.27324C2.03205 5.27324 1.49572 5.11071 1.0244 4.86693V4.89131C1.0244 6.58156 2.22707 7.99551 3.81981 8.31244C3.30845 8.45238 2.77161 8.47185 2.25145 8.36932C2.47217 9.06206 2.90442 9.66822 3.48746 10.1026C4.0705 10.5369 4.775 10.7777 5.50193 10.7909C4.2697 11.7664 2.74227 12.2937 1.17067 12.2861C0.894378 12.2861 0.618088 12.2699 0.341797 12.2374C1.88577 13.2288 3.72229 13.8057 5.68883 13.8057C12.0923 13.8057 15.6109 8.49121 15.6109 3.88366C15.6109 3.72926 15.6109 3.58299 15.6028 3.42859C16.2854 2.94102 16.8705 2.32343 17.3418 1.61645Z"
                                         fill="#808B93" />
                                 </svg>
+                            </a>
 
                             </span>
                         </div>
@@ -784,81 +810,83 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="row  mt-md-5 mt-sm-5 mt-lg-0 mt-5 mt-xl-0 justify-content-center    ">
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0 mt-lg-0 mt-md-0 d-flex flex-column align-item-center   ">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0 mt-lg-0 mt-md-0 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans">PRODUCTS</li>
-                                <li class=" text-wrap pt-4"><a href=""
+                                <li class=" text-wrap pt-4"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans  ">iDox.ai Data Discovery</a></li>
                                 <li class=" text-nowrap pt-2"><a href=""
                                         class="fs-1sm fw-normal white3 plus-sans  ">iDox.ai Data Redact</a></li>
-                                <li class=" text-wrap pt-2"><a href=""
+                                <li class=" text-wrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans  ">iDox.ai Data Compair</a></li>
-                                <li class=" text-nowrap pt-2"><a href=""
+                                <li class=" text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans  ">iDox.ai Data Review</a></li>
-                                <li class=" text-nowrap pt-2"><a href=""
+                                <li class=" text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans  ">Industries</a></li>
-                                <li class=" text-nowrap pt-2"><a href=""
+                                <li class=" text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans  ">Developer</a></li>
                             </ul>
                         </div>
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0 mt-lg-0 mt-md-0 d-flex flex-column align-item-center   ">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0 mt-lg-0 mt-md-0 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans text-uppercase ">store</li>
-                                <li class=" pt-4"><a href="" class="fs-1sm fw-normal white3 plus-sans">Choose a
+                                <li class=" pt-4"><a href="#" class="fs-1sm fw-normal white3 plus-sans">Choose a
                                         plan</a></li>
-                                <li class=" pt-2"><a href="" class="fs-1sm fw-normal white3 plus-sans ">Integrations</a>
+                                <li class=" pt-2"><a href="#"
+                                        class="fs-1sm fw-normal white3 plus-sans ">Integrations</a>
                                 </li>
-                                <li class=" pt-2"><a href="" class="fs-1sm fw-normal white3 plus-sans ">Pricing</a></li>
-                                <li class=" pt-2"><a href="" class="fs-1sm fw-normal white3 plus-sans ">News</a></li>
+                                <li class=" pt-2"><a href="#" class="fs-1sm fw-normal white3 plus-sans ">Pricing</a>
+                                </li>
+                                <li class=" pt-2"><a href="#" class="fs-1sm fw-normal white3 plus-sans ">News</a></li>
                             </ul>
                         </div>
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0   mt-lg-0 mt-xl-0 mt-sm-5 mt-md-0 d-flex flex-column align-item-center">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0   mt-lg-0 mt-xl-0 mt-sm-5 mt-md-0 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans text-uppercase">support</li>
-                                <li class="text-nowrap pt-4"><a href=""
+                                <li class="text-nowrap pt-4"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Customer Support</a></li>
                             </ul>
                         </div>
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans">COMPANY</li>
                                 <li class="text-nowrap pt-4"><a href="" class="fs-1sm fw-normal white3 plus-sans">About
                                         Us</a></li>
-                                <li class="text-nowrap pt-2"><a href=""
+                                <li class="text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Security</a></li>
-                                <li class="text-wrap pt-2"><a href=""
+                                <li class="text-wrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Partnership Opportunities</a></li>
-                                <li class="text-nowrap pt-2"><a href=""
+                                <li class="text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Careers</a></li>
-                                <li class="text-nowrap pt-2"><a href=""
+                                <li class="text-nowrap pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Privacy Policy</a></li>
-                                <li class="text-nowrap pt-2"><a href="" class="fs-1sm fw-normal white3 plus-sans">Terms
+                                <li class="text-nowrap pt-2"><a href="#" class="fs-1sm fw-normal white3 plus-sans">Terms
                                         of Services</a></li>
                             </ul>
                         </div>
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans">ENTERPRISE</li>
-                                <li class="text-nowrap pt-4"><a href=""
+                                <li class="text-nowrap pt-4"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans">Enterprise</a></li>
                             </ul>
                         </div>
-                        <div
-                            class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mt-5 mt-xl-0  mt-lg-5 mt-md-5 mt-xl-0 mt-sm-5 d-flex flex-column align-item-center"
+                            data-aos="fade-down" data-aos-duration="3000">
                             <ul class="text-md-start text-center">
                                 <li class="fs-1sm fw-medium white2 plus-sans">RESOURCES</li>
-                                <li class=" pt-4"><a href=""
+                                <li class=" pt-4"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans text-nowrap">Blog</a></li>
-                                <li class=" pt-2"><a href="" class="fs-1sm fw-normal white3 plus-sans text-nowrap">Case
+                                <li class=" pt-2"><a href="#" class="fs-1sm fw-normal white3 plus-sans text-nowrap">Case
                                         Studies</a></li>
-                                <li class=" pt-2"><a href=""
+                                <li class=" pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans text-nowrap">eBooks</a></li>
-                                <li class=" pt-2"><a href=""
+                                <li class=" pt-2"><a href="#"
                                         class="fs-1sm fw-normal white3 plus-sans text-nowrap">Events</a></li>
                             </ul>
                         </div>
@@ -867,7 +895,8 @@
             </div>
         </div>
         <div class="border-top1 mt-3 ">
-            <p class="fs-1sm fw-normal plus-sans white3 text-center m-0 pt-3 pb-3">2023 © Foxit Software Incorporated. All rights reserved.</p>
+            <p class="fs-1sm fw-normal plus-sans white3 text-center m-0 pt-3 pb-3">2023 © Foxit Software Incorporated.
+                All rights reserved.</p>
         </div>
     </footer>
 
@@ -886,6 +915,22 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="./assest/js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const Preloader = document.getElementById("preloader")
+        setTimeout(() => {
+            console.log("Delayed for 1 second.");
+            Preloader.classList.add("d-none")
+            document.body.classList.remove("overflow-hidden")
+        }, "3000");
+    </script>
+    <script>
+        AOS.init(
+            {
+                once: true
+            }
+        );
+    </script>
 </body>
 
 </html>

@@ -1,8 +1,85 @@
-$('.slider').slick({
-    slidesToShow: 8,
-    slidesToScroll: 0,
-    autoplay: false,
-    autoplaySpeed: 2000,
+function openNav() {
+  document.getElementById("navbar").classList.toggle("start-0");
+  document.body.classList.toggle("overflow-hidden");
+  document.querySelector(".menu").classList.toggle("cross")
+}
+$('.slider-1').slick({
+  dots: false,
+  infinite: true,
+  speed: 3000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: 'Linear',
+  slidesToShow: 8,
+  slidesToScroll: 1,
+  arrows: false,
+  responsive: [{
+    breakpoint: 1300,
+    settings: {
+      slidesToShow: 6,
+      autoplay: true,
+      speed: 3000,
+      slidesToScroll: 1,
+      autoplaySpeed: 0,
+      cssEase: 'Linear',
+      infinite: true,
+      dots: false,
+    }
+  },
+  {
+    breakpoint: 900,
+    settings: {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: 'Linear',
+      speed: 1000,
+    }
+  },
+  {
+    breakpoint: 650,
+    settings: {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplaySpeed: 0,
+      cssEase: 'Linear',
+    }
+  },
+  {
+    breakpoint: 580,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 0,
+      cssEase: 'Linear',
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplaySpeed: 0,
+      cssEase: 'Linear',
+    }
+  }
+  ]
+
+})
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("back-to-top");
+  window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  };
+  button.onclick = function () {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  };
 });
 
 $('.slider3').slick({

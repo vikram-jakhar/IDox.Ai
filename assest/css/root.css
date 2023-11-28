@@ -14,6 +14,9 @@
     --fc-white2:#FBFDFF;
     --fc-white3:#B0B7BD;
     --fc-blue:#0389FF;
+    --fc-black:#020D15;
+    --fc-grey:#273138;
+    --fc-grey2:#283149;
 }
 .fs-sm{
     font-size: var(--fs-sm);
